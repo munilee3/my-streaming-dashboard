@@ -2,7 +2,7 @@ import { fetchMovieById } from "@/lib/tmdb";
 import Image from "next/image";
 
 export default async function MoviePage(props: { params: Promise<{ id: string }> }) {
-  const { id } = await props.params; // ✅ FIX: unwrap params
+  const { id } = await props.params;
   const movie = await fetchMovieById(id);
 
   return (
@@ -24,9 +24,9 @@ export default async function MoviePage(props: { params: Promise<{ id: string }>
       </p>
 
       <div className="flex gap-4 text-sm text-neutral-400">
-        <span>📅 {movie.release_date}</span>
-        <span>⭐ {movie.vote_average}</span>
-        <span>⏱ {movie.runtime} min</span>
+        <span>{movie.release_date}</span>
+        <span>{movie.vote_average}</span>
+        <span>{movie.runtime} min</span>
       </div>
     </div>
   );
