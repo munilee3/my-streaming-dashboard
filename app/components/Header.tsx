@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md border-b border-neutral-800 px-6 py-4 flex items-center justify-between">
       <Link href="/" className="text-2xl font-bold text-primary tracking-wide">
-        Streamio
+        Streaming Dashboard
       </Link>
 
       <nav className="hidden md:flex gap-6 text-sm text-zinc-300">
